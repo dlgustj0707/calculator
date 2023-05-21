@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.calculator {
+    width: 287px;
+    border: 1px solid #333;
+    background-color: black;
+    padding: 5px;
+}
+
+.calculator form {
+    display: grid;
+    grid-template-columns: repeat(4, 65px);
+    grid-auto-rows: 65px;
+    gap: 5px;
+    background-color: rgb(12, 12, 12);
+}
+
+.calculator form input {
+    cursor: pointer; /*마우스를 올렸을때 커서 모양이 손가락 모양으로 바뀜*/
+    border: 2px solid #333;
+    font-size: 19px;
+}
+
+.calculator form input:hover { /*마우스를 올렸을때 음영이 나타남*/
+    box-shadow: 1px 1px 2px #333;
+}
+
+.calculator form .clear {
+    background: darkgray; /*버튼 색상*/
+    grid-column: span 3; /*버튼이 3칸을 차지함*/
+}
+
+.calculator form .operator {
+    background-color: orange;
+}
+
+.calculator form .ect {
+    background-color: rgb(50, 50, 50);
+}
+
+.calculator form input[type='button']{
+    color: white; /*버튼 글자 색상*/
+    border-radius: 50px; /*버튼 테두리를 둥글게 만들음*/
+}
+
+.calculator form input[type='text'] {
+    grid-column: span 4;
+    text-align: right; /*text가 우측으로 나오게 만들음*/
+    padding: 0 10px;
+} 
+
+.calculator form .long {
+    grid-column: span 2;
+}

@@ -1,47 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>계산기</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <table border="1">
-        <tr>
-            <td colspan="4">
-                <input type="text" id="display">
-            </td>
-        </tr>
-        <tr>
-            <td colspan="4">
-                <input type="text" id="result">
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3">AC</td>
-            <td>/</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td>*</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>+</td>
-        </tr>
-        <tr>
-            <td colspan="2">0</td>
-            <td>.</td>
-            <td>=</td>
-        </tr>
-    </table>
+    <div class="calculator">
+        <form name="forms">
+            <input type="text" name="output" readonly>
+            <input type="button" class="clear" value="C" onclick="document.forms.output.value=''">
+            <input type="button" class="operator" value="/" onclick="document.forms.output.value+='/'">
+            <input type="button" class="ect" value="7" onclick="document.forms.output.value+='7'">
+            <input type="button" class="ect" value="8" onclick="document.forms.output.value+='8'">
+            <input type="button" class="ect" value="9" onclick="document.forms.output.value+='9'">
+            <input type="button" class="operator" value="*" onclick="document.forms.output.value+='*'">
+            <input type="button" class="ect" value="4" onclick="document.forms.output.value+='4'">
+            <input type="button" class="ect" value="5" onclick="document.forms.output.value+='5'"> 
+            <input type="button" class="ect" value="6" onclick="document.forms.output.value+='6'">
+            <input type="button" class="operator" value="-" onclick="document.forms.output.value+='-'">
+            <input type="button" class="ect" value="1" onclick="document.forms.output.value+='1'">
+            <input type="button" class="ect" value="2" onclick="document.forms.output.value+='2'">
+            <input type="button" class="ect" value="3" onclick="document.forms.output.value+='3'">
+            <input type="button" class="operator" value="+" onclick="document.forms.output.value+='+'">
+            <input type="button" class="ect long" value="0" onclick="document.forms.output.value+='0'">
+            <input type="button" class="ect" value="." onclick="document.forms.output.value+='.'">
+            <input type="button" class="operator" value="=" onclick="document.forms.output.value=eval(document.forms.output.value)">
+        </form>
+    </div>
+    <script src="./calculator.js"></script>
 </body>
 </html>
